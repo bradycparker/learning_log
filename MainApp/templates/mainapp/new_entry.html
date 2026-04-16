@@ -2,11 +2,11 @@
 
 {% block content %}
 
-    <p><a href="{% url 'MainApp:topic' topic.id %}">{{ topic }}</a></p>
+    <p><a href="{% url 'mainapp:topic' topic.id %}">{{ topic }}</a></p>
 
     <p>Add a new entry</p>
 
-    <form action="{% url 'MainApp:new_entry' topic.id %}" method="post">
+    <form action="{% url 'mainapp:new_entry' topic.id %}" method="post">
         {% csrf_token %}
         {{ form.as_p }}
 

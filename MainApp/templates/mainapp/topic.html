@@ -10,7 +10,7 @@
                 <p>{{ entry.date_added|date:"M d, Y H:i" }}</p>
                 <p>{{ entry.text|linebreaks }}</p>
                 <p>
-                <a href="{% url 'MainApp:edit_entry' entry.id %}">Edit entry</a>
+                <a href="{% url 'mainapp:edit_entry' entry.id %}">Edit entry</a>
                 </p>
             </li>
         {% empty %}
@@ -19,7 +19,7 @@
     </ul>
 
     <p>
-    <a href="{% url 'MainApp:new_entry' topic.id %}">Add new entry</a>
+    <a href="{% url 'mainapp:new_entry' topic.id %}">Add new entry</a>
     </p>
 
 {% endblock content %}
