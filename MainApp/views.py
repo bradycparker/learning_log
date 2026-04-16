@@ -11,7 +11,7 @@ from django.http import Http404
 
 def index(request):
     """The home page for Learning Log."""
-    return render(request, 'MainApp/index.html')
+    return render(request, 'mainapp/index.html')
 
 @login_required
 def topics(request):
@@ -53,7 +53,7 @@ def new_topic(request):
 def new_entry(request, topic_id):
     """Add a new entry for a particular topic."""
     topic = Topic.objects.get(id=topic_id)
-    
+
     if topic.owner != request.user:
         raise Http404()
     
